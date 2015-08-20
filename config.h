@@ -72,17 +72,21 @@ static const char *scrot[]  = { "sh", ".scripts/scrot.sh", NULL };
 static const char *volup[]  = { "sh", ".scripts/volup.sh", NULL };
 static const char *voldown[]  =	{ "sh", ".scripts/voldown.sh", NULL };
 static const char *mute[]  = { "sh", ".scripts/mute.sh", NULL };
+static const char *brightup[] = { "sh", ".scripts/brightup.sh", NULL };
+static const char *brightdown[] = { "sh", ".scripts/brightdown.sh", NULL };
 static const char *lock[] = { "xtrlock", NULL };
 
 static Key keys[] = {
-	/* modifier                     key        			function        argument */
-	{ MODKEY,                       XK_p,      			spawn,          {.v = dmenucmd } },
+	/* modifier                     key				function        argument */
+	{ MODKEY,                       XK_p,				spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_h,				spawn,          {.v = halt } },
 	{ MODKEY|ShiftMask,             XK_r,				spawn,          {.v = reboot } },
 	{ MODKEY|ShiftMask,             XK_Print,			spawn,          {.v = scrot } },
 	{ 0,				XF86XK_AudioRaiseVolume,	spawn,          {.v = volup } },
 	{ 0,				XF86XK_AudioLowerVolume,	spawn,          {.v = voldown } },
 	{ 0,				XF86XK_AudioMute,		spawn,          {.v = mute } },
+	{ 0,				XF86XK_MonBrightnessUp,		spawn,          {.v = brightup } },
+	{ 0,				XF86XK_MonBrightnessDown,	spawn,          {.v = brightdown } },
 	{ WINKEY,                       XK_l,      			spawn,          {.v = lock } },
 	{ MODKEY,                       XK_b,      			togglebar,      {0} },
 	{ MODKEY,                       XK_j,      			focusstack,     {.i = +1 } },
