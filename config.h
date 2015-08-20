@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 #define NUMCOLORS 6 /* need at least 3 */
@@ -79,9 +80,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,				spawn,          {.v = halt } },
 	{ MODKEY|ShiftMask,             XK_r,				spawn,          {.v = reboot } },
 	{ MODKEY|ShiftMask,             XK_Print,			spawn,          {.v = scrot } },
-	{ MODKEY|ShiftMask,             XK_KP_Add,			spawn,          {.v = volup } },
-	{ MODKEY|ShiftMask,             XK_KP_Subtract,			spawn,          {.v = voldown } },
-	{ MODKEY|ShiftMask,             XK_KP_Multiply,			spawn,          {.v = mute } },
+	{ 0,				XF86XK_AudioRaiseVolume,	spawn,          {.v = volup } },
+	{ 0,				XF86XK_AudioLowerVolume,	spawn,          {.v = voldown } },
+	{ 0,				XF86XK_AudioMute,		spawn,          {.v = mute } },
 	{ WINKEY,                       XK_l,      			spawn,          {.v = lock } },
 	{ MODKEY,                       XK_b,      			togglebar,      {0} },
 	{ MODKEY,                       XK_j,      			focusstack,     {.i = +1 } },
