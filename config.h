@@ -74,6 +74,8 @@ static const char *voldown[]  =	{ "sh", ".scripts/voldown.sh", NULL };
 static const char *mute[]  = { "sh", ".scripts/mute.sh", NULL };
 static const char *brightup[] = { "sh", ".scripts/brightup.sh", NULL };
 static const char *brightdown[] = { "sh", ".scripts/brightdown.sh", NULL };
+static const char *kbdlightup[] = { "sh", ".scripts/kbdlightup.sh", NULL };
+static const char *kbdlightdown[] = { "sh", ".scripts/kbdlightdown.sh", NULL };
 static const char *lock[] = { "xtrlock", NULL };
 
 static Key keys[] = {
@@ -87,6 +89,8 @@ static Key keys[] = {
 	{ 0,				XF86XK_AudioMute,		spawn,          {.v = mute } },
 	{ 0,				XF86XK_MonBrightnessUp,		spawn,          {.v = brightup } },
 	{ 0,				XF86XK_MonBrightnessDown,	spawn,          {.v = brightdown } },
+	{ 0,				XF86XK_KbdBrightnessUp,		spawn,          {.v = kbdlightup } },
+	{ 0,				XF86XK_KbdBrightnessDown,	spawn,          {.v = kbdlightdown } },
 	{ WINKEY,                       XK_l,      			spawn,          {.v = lock } },
 	{ MODKEY,                       XK_b,      			togglebar,      {0} },
 	{ MODKEY,                       XK_j,      			focusstack,     {.i = +1 } },
