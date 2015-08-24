@@ -16,7 +16,8 @@ static const char colors[NUMCOLORS][ColLast][8] = {
 };
 
 static const char font[]            = "-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int gappx     = 20;       /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
@@ -47,8 +48,8 @@ static const Rule rules[] = {
 };
 
 /* layout(s) 2nd part */
-static const float mfact      = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster      = 1;    /* number of clients in master area */
+static const float mfact      = 0.55;  /* factor of master area size [0.05..0.95] */
+static const int nmaster      = 1;     /* number of clients in master area */
 static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
 
 /* key definitions */
