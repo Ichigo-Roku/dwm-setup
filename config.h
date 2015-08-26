@@ -77,7 +77,7 @@ static const char *brightup[] = { "sh", ".scripts/brightup.sh", NULL };
 static const char *brightdown[] = { "sh", ".scripts/brightdown.sh", NULL };
 static const char *kbdlightup[] = { "sh", ".scripts/kbdlightup.sh", NULL };
 static const char *kbdlightdown[] = { "sh", ".scripts/kbdlightdown.sh", NULL };
-static const char *lock[] = { "xtrlock", NULL };
+static const char *lock[] = { "sh", ".scripts/lock.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key				function        argument */
